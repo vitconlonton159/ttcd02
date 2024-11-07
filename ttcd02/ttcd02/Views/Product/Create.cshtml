@@ -1,0 +1,25 @@
+﻿@model ttcd02.Models.Product
+
+<h2>Thêm Sản Phẩm Mới</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label for="Name">Tên Sản Phẩm</label>
+        <input type="text" id="Name" name="Name" value="@Model?.Name" required />
+    </div>
+    <div>
+        <label for="Description">Mô Tả</label>
+        <input type="text" id="Description" name="Description" value="@Model?.Description" required />
+    </div>
+    <div>
+        <label for="Price">Giá</label>
+        <input type="number" id="Price" name="Price" value="@Model?.Price" required />
+    </div>
+    <div>
+        <label for="Stock">Số Lượng</label>
+        <input type="number" id="Stock" name="Stock" value="@Model?.Stock" required />
+    </div>
+    <button type="submit">Thêm Sản Phẩm</button>
+</form>
+
+<a asp-action="Index">Trở Lại Danh Sách</a>
